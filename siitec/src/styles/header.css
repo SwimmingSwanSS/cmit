@@ -1,0 +1,135 @@
+/* src/components/Header.css */
+.header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 8%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--grey-dark);
+}
+
+.logo h1 span {
+  color: var(--copper);
+}
+
+.logo p {
+  font-size: 0.7rem;
+  margin: 0;
+  color: var(--grey-medium);
+  letter-spacing: 1px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--grey-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--copper);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--copper);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.apply-button {
+  background-color: var(--copper);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.apply-button:hover {
+  background-color: var(--copper-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Mobile menu styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--grey-dark);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1rem 5%;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background-color: var(--white);
+    box-shadow: var(--shadow-lg);
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .nav.active {
+    left: 0;
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .apply-button {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+/* src/styles/theme.css */
+:root {
+  --copper: #b87333;
+  --copper-light: #d89b6a;
+  --copper-dark: #8a4b1a;
+  --grey-dark: #333333;
+  --grey-medium: #555555;
+  --grey-light: #eeeeee;
+  --white: #ffffff;
+  --black: #000000;
+  
+  --tech-gradient: linear-gradient(135deg, var(--copper) 0%, var(--grey-dark) 100%);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+}

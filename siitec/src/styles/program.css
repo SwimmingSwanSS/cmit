@@ -1,0 +1,132 @@
+/* src/components/Programs.css */
+.programs {
+  padding: 5rem 8%;
+  background-color: var(--white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--grey-dark);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  bottom: -10px;
+  left: 25%;
+  background: var(--tech-gradient);
+  border-radius: 2px;
+}
+
+.section-header p {
+  color: var(--grey-medium);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--grey-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--copper-light);
+}
+
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--tech-gradient);
+}
+
+.program-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(184, 115, 51, 0.1);
+  color: var(--copper);
+}
+
+.program-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--grey-dark);
+}
+
+.program-card p {
+  color: var(--grey-medium);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.learn-more {
+  color: var(--copper);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: var(--copper-dark);
+}
+
+.learn-more::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover::after {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .programs {
+    padding: 3rem 5%;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}

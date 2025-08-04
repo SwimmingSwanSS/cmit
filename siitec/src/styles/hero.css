@@ -1,0 +1,114 @@
+/* src/components/Hero.css */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 8%;
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: var(--tech-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--grey-medium);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tech-circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--tech-gradient);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.circuit-pattern {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="white" stroke-width="0.5" stroke-dasharray="2,2"/></svg>');
+  opacity: 0.2;
+}
+
+.floating-tech {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.tech-icon.ai { top: 20%; left: 20%; animation: float 4s ease-in-out infinite; }
+.tech-icon.iot { top: 20%; right: 20%; animation: float 5s ease-in-out infinite 0.5s; }
+.tech-icon.robotics { bottom: 20%; left: 20%; animation: float 6s ease-in-out infinite 1s; }
+.tech-icon.data { bottom: 20%; right: 20%; animation: float 4.5s ease-in-out infinite 1.5s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .tech-circle {
+    width: 300px;
+    height: 300px;
+  }
+}
