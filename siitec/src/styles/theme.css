@@ -1,20 +1,141 @@
-/* src/styles/theme.css */
+/* Updated Theme Variables */
 :root {
+  /* Copper Color Palette */
   --copper: #b87333;
   --copper-light: #d89b6a;
+  --copper-bright: #e8a35d;
   --copper-dark: #8a4b1a;
-  --grey-dark: #333333;
-  --grey-medium: #555555;
-  --grey-light: #eeeeee;
+  --copper-darker: #5e3412;
+  
+  /* Grey Color Palette - Dark Theme */
+  --grey-darker: #121212;
+  --grey-dark: #1e1e1e;
+  --grey-medium: #2d2d2d;
+  --grey-light: #3d3d3d;
+  --grey-lighter: #4a4a4a;
+  --grey-text: #e0e0e0;
   --white: #ffffff;
-  --black: #000000;
   
+  /* Tech Gradients */
   --tech-gradient: linear-gradient(135deg, var(--copper) 0%, var(--grey-dark) 100%);
+  --tech-gradient-reverse: linear-gradient(135deg, var(--grey-dark) 0%, var(--copper) 100%);
+  --tech-overlay: linear-gradient(to bottom, rgba(24, 24, 24, 0.8) 0%, rgba(24, 24, 24, 0.9) 100%);
   
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  /* Shadows */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --glow-copper: 0 0 10px rgba(184, 115, 51, 0.5);
   
+  /* Borders */
   --border-radius: 8px;
   --border-radius-lg: 16px;
+  --border-copper: 1px solid var(--copper);
+  --border-grey: 1px solid var(--grey-light);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-medium: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+}
+
+/* Global Dark Theme Base */
+body {
+  background-color: var(--grey-darker);
+  color: var(--grey-text);
+}
+
+/* Enhanced Header with Dark Theme */
+.header {
+  background-color: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--border-grey);
+}
+
+/* Dark Card Styles */
+.program-card,
+.faculty-card {
+  background-color: var(--grey-dark);
+  border: var(--border-grey);
+}
+
+.program-card:hover,
+.faculty-card:hover {
+  border-color: var(--copper);
+  box-shadow: var(--shadow-lg), var(--glow-copper);
+}
+
+/* Copper Accent Elements */
+.apply-button,
+.newsletter-form button,
+.expertise-badge {
+  background-color: var(--copper);
+  color: var(--grey-darker);
+  font-weight: 600;
+}
+
+.apply-button:hover,
+.newsletter-form button:hover {
+  background-color: var(--copper-bright);
+  box-shadow: var(--glow-copper);
+}
+
+/* Link Hover Effects */
+a:hover,
+.link-group a:hover,
+.nav a:hover {
+  color: var(--copper-bright);
+}
+
+/* Tech Elements Enhancement */
+.tech-circle {
+  border: 2px solid var(--copper);
+  box-shadow: inset 0 0 20px rgba(184, 115, 51, 0.3), var(--shadow-md);
+}
+
+/* Footer Dark Theme */
+.footer {
+  background-color: var(--grey-dark);
+  border-top: var(--border-copper);
+}
+
+.footer::before {
+  height: 3px;
+  background: var(--tech-gradient-reverse);
+}
+
+/* Form Inputs */
+input, textarea, select {
+  background-color: var(--grey-medium) !important;
+  border: var(--border-grey) !important;
+  color: var(--grey-text) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--copper) !important;
+  box-shadow: var(--glow-copper);
+}
+
+/* Additional Copper Effects */
+::selection {
+  background: var(--copper);
+  color: var(--grey-darker);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-medium);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--copper);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--copper-light);
 }
