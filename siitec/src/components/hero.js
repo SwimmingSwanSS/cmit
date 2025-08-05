@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/theme.css';
 import '../styles/hero.css';
-import backgroundVideo from '../assets/video8.mp4'; // Update with your video path
+import backgroundVideo from '../assets/video6.mp4'; // Update with your video path
 
 const Hero = () => {
   return (
