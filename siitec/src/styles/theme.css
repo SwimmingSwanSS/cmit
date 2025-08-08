@@ -1,141 +1,116 @@
-/* Updated Theme Variables */
+/* Luxe Copper-Gold-Bronze Tech Theme */
 :root {
-  /* Copper Color Palette */
-  --copper: #b87333;
-  --copper-light: #d89b6a;
-  --copper-bright: #e8a35d;
-  --copper-dark: #8a4b1a;
-  --copper-darker: #5e3412;
+  /* Metallic Copper-Gold-Bronze Palette */
+  --copper: #D4A059;  /* Rich copper-gold base */
+  --copper-light: #E8B97C;  /* Luminous gold highlight */
+  --copper-bright: #F5D0A2;  /* Bright golden glow */
+  --copper-dark: #B58C4A;  /* Deep bronze tone */
+  --copper-darker: #8A6C3B;  /* Aged bronze shadow */
   
-  /* Grey Color Palette - Dark Theme */
-  --grey-darker: #121212;
-  --grey-dark: #1e1e1e;
-  --grey-medium: #2d2d2d;
-  --grey-light: #3d3d3d;
-  --grey-lighter: #4a4a4a;
-  --grey-text: #e0e0e0;
-  --white: #ffffff;
+  /* Modern Tech Greys */
+  --grey-darker: #0F0F0F;  /* Deep matte background */
+  --grey-dark: #1E1E1E;  /* Card surfaces */
+  --grey-medium: #2D2D2D;  /* UI elements */
+  --grey-light: #3C3C3C;  /* Borders and details */
+  --grey-lighter: #4B4B4B;  /* Secondary text */
+  --grey-text: #EAEAEA;  /* Primary content */
+  --white: #FFFFFF;  /* Pure highlights */
   
-  /* Tech Gradients */
-  --tech-gradient: linear-gradient(135deg, var(--copper) 0%, var(--grey-dark) 100%);
-  --tech-gradient-reverse: linear-gradient(135deg, var(--grey-dark) 0%, var(--copper) 100%);
-  --tech-overlay: linear-gradient(to bottom, rgba(24, 24, 24, 0.8) 0%, rgba(24, 24, 24, 0.9) 100%);
+  /* Metallic Gradients */
+  --tech-gradient: linear-gradient(
+    135deg, 
+    var(--copper) 0%, 
+    #3A2C1A 100%
+  );
+  --tech-gradient-reverse: linear-gradient(
+    135deg, 
+    var(--grey-dark) 0%, 
+    var(--copper) 100%
+  );
+  --metal-overlay: linear-gradient(
+    to bottom, 
+    rgba(15, 15, 15, 0.9) 0%, 
+    rgba(58, 44, 26, 0.7) 100%
+  );
   
-  /* Shadows */
-  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4);
-  --glow-copper: 0 0 10px rgba(184, 115, 51, 0.5);
+  /* Luxe Lighting Effects */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 8px 36px rgba(0, 0, 0, 0.6);
+  --glow-copper: 0 0 18px rgba(212, 160, 89, 0.7);
+  --glow-metal: 0 0 10px rgba(212, 160, 89, 0.4);
   
-  /* Borders */
-  --border-radius: 8px;
-  --border-radius-lg: 16px;
+  /* Refined Borders */
+  --border-radius: 6px;
+  --border-radius-lg: 14px;
   --border-copper: 1px solid var(--copper);
-  --border-grey: 1px solid var(--grey-light);
+  --border-tech: 1px solid var(--grey-light);
   
-  /* Transitions */
-  --transition-fast: all 0.2s ease;
-  --transition-medium: all 0.3s ease;
-  --transition-slow: all 0.5s ease;
+  /* Smooth Metallic Transitions */
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Global Dark Theme Base */
-body {
-  background-color: var(--grey-darker);
-  color: var(--grey-text);
+/* Enhanced Metallic Elements */
+.button-metallic {
+  background: linear-gradient(
+    to bottom,
+    var(--copper-light) 0%,
+    var(--copper-dark) 100%
+  );
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
-/* Enhanced Header with Dark Theme */
-.header {
-  background-color: rgba(30, 30, 30, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: var(--border-grey);
-}
-
-/* Dark Card Styles */
-.program-card,
-.faculty-card {
-  background-color: var(--grey-dark);
-  border: var(--border-grey);
-}
-
-.program-card:hover,
-.faculty-card:hover {
-  border-color: var(--copper);
-  box-shadow: var(--shadow-lg), var(--glow-copper);
-}
-
-/* Copper Accent Elements */
-.apply-button,
-.newsletter-form button,
-.expertise-badge {
-  background-color: var(--copper);
-  color: var(--grey-darker);
-  font-weight: 600;
-}
-
-.apply-button:hover,
-.newsletter-form button:hover {
-  background-color: var(--copper-bright);
-  box-shadow: var(--glow-copper);
-}
-
-/* Link Hover Effects */
-a:hover,
-.link-group a:hover,
-.nav a:hover {
-  color: var(--copper-bright);
-}
-
-/* Tech Elements Enhancement */
-.tech-circle {
-  border: 2px solid var(--copper);
-  box-shadow: inset 0 0 20px rgba(184, 115, 51, 0.3), var(--shadow-md);
-}
-
-/* Footer Dark Theme */
-.footer {
-  background-color: var(--grey-dark);
-  border-top: var(--border-copper);
-}
-
-.footer::before {
-  height: 3px;
-  background: var(--tech-gradient-reverse);
-}
-
-/* Form Inputs */
-input, textarea, select {
-  background-color: var(--grey-medium) !important;
-  border: var(--border-grey) !important;
-  color: var(--grey-text) !important;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: var(--copper) !important;
-  box-shadow: var(--glow-copper);
-}
-
-/* Additional Copper Effects */
-::selection {
-  background: var(--copper);
-  color: var(--grey-darker);
-}
-
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--grey-medium);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--copper);
+.button-metallic::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 100%
+  );
   border-radius: var(--border-radius);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--copper-light);
+/* Metallic Text Effects */
+.metallic-text {
+  background: linear-gradient(
+    to right,
+    var(--copper-light),
+    var(--copper-dark),
+    var(--copper-light)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Patina Effect (optional) */
+.patina-effect {
+  position: relative;
+}
+
+.patina-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 65%,
+    rgba(83, 104, 114, 0.15) 100%
+  );
+  pointer-events: none;
 }
