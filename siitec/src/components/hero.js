@@ -1,15 +1,40 @@
 // src/components/Hero.jsx
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import '../styles/theme.css';
 import '../styles/hero.css';
-import backgroundVideo from '../assets/video6.mp4'; // Update with your video path
+import backgroundVideo from '../assets/video4.mp4';
 
 const Hero = () => {
+  const videoRef = useRef(null);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (videoRef.current && heroRef.current) {
+        const heroHeight = heroRef.current.offsetHeight;
+        videoRef.current.style.height = `${heroHeight}px`;
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="home" ref={heroRef}>
       {/* Background Video */}
       <div className="video-background">
-        <video autoPlay loop muted playsInline>
+        <video 
+          ref={videoRef}
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
           <source src={backgroundVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -24,7 +49,7 @@ const Hero = () => {
           <button className="secondary-button">Virtual Tour</button>
         </div>
       </div>
-      <div className="hero-image">
+      {/* <div className="hero-image">
         <div className="tech-sphere">
           <div className="circuit-pattern"></div>
           <div className="floating-tech">
@@ -35,7 +60,7 @@ const Hero = () => {
           </div>
           <div className="glow-effect"></div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

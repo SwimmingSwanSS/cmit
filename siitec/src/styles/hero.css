@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 6rem 8%;
-  min-height: 100vh;
+  min-height: 100px;
+  height: 100vh;
+  max-height: 600px;
   position: relative;
   overflow: hidden;
 }
@@ -14,7 +16,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 620px;
   z-index: -1;
   overflow: hidden;
 }
@@ -23,6 +25,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .video-overlay {
@@ -40,6 +43,7 @@
 }
 
 .hero-content {
+  top: -80px;
   flex: 1;
   max-width: 600px;
   position: relative;
@@ -72,7 +76,7 @@
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  color: var(--grey-light);
+  color: var(--white);
   opacity: 0.9;
   line-height: 1.6;
 }
@@ -80,10 +84,11 @@
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
+  text-align: center;
 }
 
 .primary-button {
-  background: var(--tech-gradient);
+  background: var(--tech-gradient-reverse);
   color: var(--grey-darker);
   border: none;
   padding: 0.9rem 2.2rem;
@@ -119,6 +124,7 @@
 }
 
 .hero-image {
+   top: -80px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -202,18 +208,33 @@
   100% { transform: translateY(0); }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .hero {
     padding: 5rem 6%;
   }
   
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   
   .tech-sphere {
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .tech-sphere {
+    width: 380px;
+    height: 380px;
   }
 }
 
@@ -222,12 +243,14 @@
     flex-direction: column;
     text-align: center;
     padding: 4rem 5%;
-    min-height: auto;
+    height: auto;
+    min-height: 100vh;
+    gap: 3rem;
   }
   
   .hero-content {
     max-width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
   }
   
   .hero-buttons {
@@ -241,8 +264,12 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 5%;
+  }
+  
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   
   .hero-content p {
@@ -262,8 +289,12 @@
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 5%;
+  }
+  
   .hero-content h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   
   .hero-buttons {
@@ -274,5 +305,17 @@
   .primary-button,
   .secondary-button {
     width: 100%;
+    padding: 0.8rem;
+  }
+  
+  .tech-sphere {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .tech-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
   }
 }
