@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import '../styles/theme.css';
 import '../styles/hero.css';
-import backgroundVideo from '../assets/video4.mp4';
+import backgroundVideo from '../assets/video1.mp4';
 
 const Hero = () => {
   const videoRef = useRef(null);
