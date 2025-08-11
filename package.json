@@ -7,5 +7,23 @@
     "lucide-react": "^0.536.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
-  }
+  },
+  "name": "cmit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoeNoe25/cmit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoeNoe25/cmit/issues"
+  },
+  "homepage": "https://github.com/NoeNoe25/cmit#readme",
+  "description": ""
 }
