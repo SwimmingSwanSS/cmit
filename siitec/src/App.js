@@ -2,10 +2,10 @@
 import React from 'react';
 import Header from './components/header';
 import Hero from './components/hero';
-import Programs from './components/program';
 import Faculty from './components/faculty';
 import Footer from './components/footer';
 import './App.css';
+import Departments from './components/departments';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Programs />
+        <Departments />
         <Faculty />
       </main>
       <Footer />
