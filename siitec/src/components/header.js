@@ -28,6 +28,7 @@ const Header = () => {
           <ul>
             <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
             <li><a href="#programs" onClick={() => setMenuOpen(false)}>Programs</a></li>
+            <li><a href="#reseach centers" onClick={() => setMenuOpen(false)}>Research Centers</a></li>
             <li><a href="#faculty" onClick={() => setMenuOpen(false)}>Faculty</a></li>
             <li><a href="#facilities" onClick={() => setMenuOpen(false)}>Facilities</a></li>
             <li><a href="#news" onClick={() => setMenuOpen(false)}>News</a></li>
