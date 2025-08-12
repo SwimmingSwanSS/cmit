@@ -1,3 +1,12 @@
+// Import Font Awesome core styles
+import { library } from '@fortawesome/fontawesome-svg-core';
+
+// Import specific icons you need
+import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+
+// Add icons to the library
+library.add(faSearch, faPlus);
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
